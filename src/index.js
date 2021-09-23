@@ -2,15 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import landing from './views/LandingPage/landing'
 import reportWebVitals from './reportWebVitals';
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 Amplify.configure(config);
 
+const Routing = () => {
+  return(
+    <Router>
+      {/* <Header/> */}
+      <Switch>
+        <Route exact path="/" component={landing} />
+        <Route path="/app" component={App} />
+        {/* <Route path="/service" component={Service} /> */}
+      </Switch>
+      {/* <Footer/> */}
+    </Router>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Routing />
   </React.StrictMode>,
   document.getElementById('root')
 );
