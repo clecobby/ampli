@@ -47,7 +47,7 @@ export default function landing(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Join our Dope Talent Yard.</h1>
+              <h1 className={classes.title}>Where Artists reach their full potential </h1>
               <h2>WE ARE A COMPANY THAT MANAGES ARTISTS TO REACH THEIR FULL</h2>
               <br />
               <Button
